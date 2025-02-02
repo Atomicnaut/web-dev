@@ -1,0 +1,180 @@
+@import url("https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap");
+
+:root {
+	--white: #e9ebed;
+	--yellow: #f8b93a;
+	--red: #ff3347;
+	--green: #72c56d;
+	--dark-gray: #323434;
+	--light-gray: #3c3e3e;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	scroll-behavior: smooth;
+}
+
+button {
+	all: unset;
+	outline: revert;
+	box-sizing: border-box;
+	display: inline-block;
+	cursor: pointer;
+}
+
+input,
+textarea,
+button,
+select {
+	font: inherit;
+}
+
+.sr-only,
+.sr-only-focusable:not(:focus):not(:focus-within) {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	white-space: nowrap;
+	border: 0;
+}
+
+::selection {
+	background-color: var(--white);
+	color: var(--dark-gray);
+}
+
+ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+a {
+	text-decoration: none;
+}
+
+body {
+	font-family: "Chakra Petch", sans-serif;
+	margin: 0;
+	padding: 0;
+	background: radial-gradient(circle, var(--dark-gray), var(--light-gray));
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+}
+
+/* Header */
+header {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: var(--white);
+	gap: 1rem;
+	font-size: 2rem;
+}
+
+.middle-icon {
+    padding-inline: 0.2rem;
+}
+
+.red {
+	color: var(--red);
+}
+
+.green {
+	color: var(--green);
+}
+
+.yellow {
+	color: var(--yellow);
+}
+
+/* Main */
+main {
+    flex: 1;
+}
+
+#game {
+	width: 40%;
+    max-width: 700px;
+    background-color: var(--white);
+    color: var(--white);
+    margin: 0 auto;
+	border-radius: 0.3rem;
+	margin-top: 3rem;
+	padding: 1rem;
+}
+
+.stat {
+    padding-right: 1rem;
+}
+
+#stats {
+	background-color: var(--green);
+	color: var(--dark-gray);
+	font-size: 1.5rem;
+	padding: 1rem;
+	border-radius: 0.3rem;
+}
+
+#controls {
+	margin-block: 0.5rem;
+	display: flex;
+	gap: 0.5rem;
+}
+
+#controls button {
+	background-color: var(--yellow);
+	color: var(--dark-gray);
+	padding: 1rem;
+	border-radius: 0.3rem;
+	font-size: 1.25rem;
+	font-weight: 500;
+	transition: all 300ms;
+	opacity: 0.9;
+	width: 25%;
+	text-align: center;
+}
+
+#controls button:hover {
+	opacity: 1;
+}
+
+#monsterStats {
+    display: none;
+	background-color: var(--red);
+	color: var(--white);
+	font-size: 1.3rem;
+	border-radius: 0.3rem;
+	padding: 1rem;
+	margin-bottom: 0.5rem;
+}
+
+#text {
+	background-color: var(--dark-gray);
+	color: var(--white);
+	padding: 1rem;
+	border-radius: 0.3rem;
+	font-size: 1.25rem;
+	line-height: 1.5rem;
+}
+
+/* Footer */
+footer {
+	position: fixed;
+	width: 100%;
+	bottom: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	color: var(--white);
+	gap: 1rem;
+}

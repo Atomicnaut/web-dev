@@ -1,11 +1,4 @@
-let xp = 0;
-let health = 100;
-let gold = 50;
-let currentWeapon = 0;
-let fighting;
-let monterHealth;
-let inventory = ["stick"];
-
+// DOM
 const button1 = document.querySelector("#button1");
 const button2 = document.querySelector("#button2");
 const button3 = document.querySelector("#button3");
@@ -17,43 +10,49 @@ const monsterStats = document.querySelector("#monsterStats");
 const monsterNameText = document.querySelector("#monsterName");
 const monsterHealthText = document.querySelector("#monsterHealth");
 
+// Variables
+let xp = 0;
+let health = 100;
+let gold = 50;
+let currentWeapon = 0;
+let fighting;
+let monsterHealth;
+let inventory = ["Stick"];
 const weapons = [
 	{
-		name: "stick",
+		name: "Stick",
 		power: 5
 	},
 	{
-		name: "dagger",
+		name: "Hatchet",
 		power: 30
 	},
 	{
-		name: "claw hammer",
+		name: "Dagger",
 		power: 50
 	},
 	{
-		name: "sword",
+		name: "Sword",
 		power: 100
 	}
 ];
-
 const monsters = [
   {
-    name: "slime",
+    name: "Slime",
     level: 2,
     health: 15
   },
   {
-    name: "fanged beast",
+    name: "Beast",
     level: 8,
     health: 60
   },
   {
-    name: "dragon",
+    name: "Dragon",
     level: 20,
     health: 300
   }
 ];
-
 const locations = [
     {
         name: "town square",
@@ -105,12 +104,12 @@ const locations = [
 	}
 ]
 
-
 // initialize buttons
 button1.onclick = goStore;
 button2.onclick = goCave;
 button3.onclick = fightDragon;
 
+// functions
 function update(location) {
     monsterStats.style.display = "none";
 	button1.innerText = location["button text"][0];
@@ -220,9 +219,18 @@ function attack() {
 		fighting === 2 ? winGame() : defeatMonster();
 	}
 
-	if (Math.random() <= .1 && inventory.length !== 1) {
-        text.innerText += " Your " + inventory.pop() + " breaks.";
-        currentWeapon--;
+	if (Math.random() <= .1) {
+		if (inventory.length === 1) {
+			if (currentWeapon === 0) return;
+			text.innerText += " Your " + inventory.pop() + " breaks.";
+			currentWeapon = 0;
+			inventory = ["stick"];
+			text.innerText += " In your inventory you have: " + inventory;
+		} else {
+			text.innerText += " Your " + inventory.pop() + " breaks.";
+			currentWeapon--;
+			text.innerText += " In your inventory you have: " + inventory;
+		}
 	}
 }
 
