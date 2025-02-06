@@ -5,19 +5,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Movie Database</title>
     <link rel="stylesheet" href="style.css"/>
+    <script src="script.js" defer></script>
+    <script src="https://kit.fontawesome.com/bc6122e952.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <div class="topnav">
-        <a href="#" class="active">Movie Database</a>
-        <div class="search-container">
+    <header>
+        <nav>
+            <a href="#">
+                <p>Movie Database</p>
+                <p>|</p>
+                <div>
+                    <i class="fa-solid fa-ticket red"></i>
+                    <i class="fa-solid fa-film yellow middle-icon"></i>
+                    <i class="fa-solid fa-clapperboard blue"></i>
+                </div>
+            </a>
             <form action="" role="search" id="form">
                 <input type="search" id="query" name="q" placeholder="Search"/>
             </form>
-        </div>
-    </div>
+        </nav>
+    </header>
 
-    <div class="row">
-        <div class="column"></div>
-    </div>
+    <main>
+        <section id="section"></section>
+    </main>
+
+    <footer>
+        <div>
+            <i class="fa-solid fa-ticket red"></i>
+            <i class="fa-solid fa-film yellow middle-icon"></i>
+            <i class="fa-solid fa-clapperboard blue"></i>
+        </div>
+        <p>|</p>
+        <p>&copy; 2024</p>
+        <p>|</p>
+        <p>Atomicnaut</p>
+    </footer>
 </body>
 </html>

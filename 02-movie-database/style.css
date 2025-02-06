@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+:root {
+	--white: #f2f2e8;
+	--yellow: #d7ad63;
+	--red: #c33c36;
+	--blue: #a2c5d0;
+	--dark-gray: #323434;
+	--light-gray: #3c3e3e;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	scroll-behavior: smooth;
+}
+
+button {
+	all: unset;
+	outline: revert;
+	box-sizing: border-box;
+	display: inline-block;
+	cursor: pointer;
+}
+
+input,
+textarea,
+button,
+select {
+	font: inherit;
+}
+
+.sr-only,
+.sr-only-focusable:not(:focus):not(:focus-within) {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	white-space: nowrap;
+	border: 0;
+}
+
+::selection {
+	background-color: var(--white);
+	color: var(--dark-gray);
+}
+
+ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+a {
+	text-decoration: none;
+}
+
+body {
+	font-family: "Nunito", serif;
+	margin: 0;
+	padding: 0;
+	background: radial-gradient(circle, var(--dark-gray), var(--light-gray));
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+}
+
+/* Header */
+header {
+	flex: 0 1 auto;
+}
+
+nav {
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5rem;
+}
+
+nav a {
+    color: var(--white);
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.middle-icon {
+    padding-inline: 0.2rem;
+}
+
+.red {
+	color: var(--red);
+}
+
+.blue {
+	color: var(--blue);
+}
+
+.yellow {
+	color: var(--yellow);
+}
+
+input {
+    all: unset;
+	outline: revert;
+	box-sizing: border-box;
+	display: inline-block;
+    background-color: var(--white);
+    color: var(--dark-gray);
+    font-size: 1.25rem;
+    height: 2.5rem;
+    padding: 1rem;
+    border-radius: 0.3rem;
+}
+
+/* Main */
+main {
+    /* flex: 1;
+	overflow-y: auto;
+	max-height: 80vh; */
+	flex: 1 1 auto;
+  	overflow-y: auto;
+}
+
+section {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 3rem auto;
+    padding-inline: 5rem;
+    gap: 3rem;
+    row-gap: 5rem;
+}
+
+.card {
+    text-align: center;
+    max-width: 12.5rem;
+}
+
+h3 {
+    margin: 0.3rem 0;
+    color: var(--white);
+}
+
+
+.thumbnail {
+    border-radius: 0.3rem;
+    width: 100%;
+    height: auto;
+}
+
+/* Footer */
+footer {
+	/* position: fixed;
+	bottom: 0; */
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	color: var(--white);
+	gap: 1rem;
+	margin-top: auto;
+	flex: 0 1 auto;
+}
