@@ -1,0 +1,43 @@
+body {
+	margin: 0 0 3rem 3rem;
+	padding: 0;
+	font-family: sans-serif;
+}
+
+.main-page {
+	text-align: center;
+}
+
+.main-figure {
+	margin-inline: auto;
+}
+
+figure {
+	margin: 0;
+	width: 600px;
+}
+
+img {
+	width: 600px;
+	height: auto;
+	border-radius: 0.3rem;
+}
+
+figcaption {
+	width: 100%;
+	font-size: 0.8rem;
+}
+
+.main-list {
+	padding-left: 0;
+	list-style: none;
+}
+
+.main-list li {
+	padding: 0.3rem 0;
+}
+
+.main-list li a {
+	text-decoration: none;
+	font-size: 1.2rem;
+}
